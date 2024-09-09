@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components'
+const { path = "#" } = Astro.props;
+const { iconName = "#" } = Astro.props;
+---
+<a href = {path}>
+    <Icon class="navicon" size="25px" name = {iconName} />
+</a>
+
+<style>
+
+a
+{
+    background-color: rgb(224, 212, 195);
+    padding:5px;
+    border-radius: 35px;
+    margin:5px;
+    transition: background-color 0.5s ease;
+}
+
+a:hover
+{
+    background-color: rgb(214, 204, 190);
+}
+
+</style>
+ 

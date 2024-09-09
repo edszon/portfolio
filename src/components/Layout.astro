@@ -1,3 +1,7 @@
+---
+import NavIcon from "./NavIcon.astro"
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -10,7 +14,8 @@
 	<body>
 
         <header class="fixed flex text-center w-full p-3">
-            hey man leave her alone
+            <NavIcon path="#" iconName="mdi:house"></NavIcon>
+            <NavIcon path="#" iconName="solar:moon-bold"></NavIcon>
         </header>
 
 		<slot />
@@ -32,6 +37,8 @@
         justify-content: right;
         align-items: center;
     }
+
+   
 
     html
     {
