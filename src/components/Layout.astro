@@ -1,0 +1,41 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Edson Cavalcanti</title>
+	</head>
+
+	<body>
+
+        <header class="fixed flex text-center w-full p-3">
+            hey man leave her alone
+        </header>
+
+		<slot />
+
+	</body>
+</html>
+
+<style>
+
+    *
+    {
+        margin: 0;
+        top: 0;
+        box-sizing: border-box;
+    }
+
+    header
+    {
+        justify-content: right;
+        align-items: center;
+    }
+
+    html
+    {
+        background-color: rgb(235, 226, 213);
+    }
+
+</style>

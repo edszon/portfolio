@@ -1,16 +1,73 @@
 ---
-
+import Layout from "../components/Layout.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Edson Cavalcanti</title>
-	</head>
-	<body>
-		<h1>Em construção</h1>
-	</body>
-</html>
+<Layout>
+
+	<div class="flex h-screen text-center" id="logo">
+		<div class="m-auto">
+			<div id="logowrapper">
+				<h1 class="select-none text-9xl">edszon</h1>
+				<p class="select-none -mt-6">&copy; 2024 Edson Cavalcanti</p>
+				<p class="m-1 select-none" id="specializations">GRAPHICS • UX • UI • FRONTEND</p>
+				<a href="#" class="mt-2 select-none">P O R T F Ó L I O S</a>
+			</div>
+		</div>
+	</div>
+
+</Layout>
+
+<style>
+
+	#logo
+	{
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	#logo #specializations
+	{
+		letter-spacing: 3px;
+		font-size: 15px;
+		margin-left:3px;
+		background-color: transparent;
+		transition: background-color 1.5s ease;
+	}
+
+	#logowrapper:hover #specializations
+	{
+		background-color: rgb(224, 214, 201);
+	}
+
+	#logo h1
+	{
+		font-family: 'Lovan', sans-serif;
+		font-weight: bold;
+		letter-spacing: -8px;
+		margin-left: -7px;
+	}
+
+	#logo a
+	{
+		display:inline-block;
+		padding:8px 10px 8px 10px;
+		background-color: rgb(230, 219, 205);
+		text-decoration: none !important;
+		font-size: 15px;
+		transition: background-color 0.5s ease;
+	}
+
+	#logo a:hover
+	{
+		background-color: rgb(214, 204, 190);
+	}
+
+	@font-face 
+	{
+		font-family: 'Lovan';
+		src: url('/portfolio/fonts/lovan.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+</style>
