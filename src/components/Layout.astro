@@ -30,10 +30,10 @@ import { fade } from 'astro:transitions';
 
 <style>
 
-    *
+    html
     {
-        margin: 0;
         top: 0;
+        margin: 0;
         box-sizing: border-box;
     }
 
@@ -41,6 +41,17 @@ import { fade } from 'astro:transitions';
     {
         justify-content: right;
         align-items: center;
+        z-index: 999;
+        height: fit-content;
+    }
+
+    @media screen and (orientation: portrait)
+    {
+    
+        header
+        {
+            bottom: 0;
+        }
     }
 
    
