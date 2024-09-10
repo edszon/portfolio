@@ -1,0 +1,64 @@
+---
+const {path = '#'} = Astro.props;
+const {cardName = '#'} = Astro.props;
+let {bg = "#"} = Astro.props;
+bg = 'url("' + bg + '")';
+---
+
+<a href={path}>
+
+    <div id="card">
+        <h1>{cardName}</h1>
+    </div>
+
+</a>
+
+<style define:vars={{bg}}>
+
+@media screen and (orientation: landscape)
+{
+    #card
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        width:25vw;
+        height:40vw;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size:15px;
+        margin:10px;
+    }
+}
+
+@media screen and (orientation: portrait)
+{
+    #card
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        width:60vw;
+        height:60vw;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size:15px;
+        margin:10px;
+    }
+}
+
+#card
+{
+    background-image: var(--bg);
+    background-size: auto 100%;
+    background-position: center;
+}
+
+#card h1
+{
+    color:rgb(235, 226, 213);
+    background-color:black;
+    padding:8px 12px 8px 12px;
+}
+
+</style>

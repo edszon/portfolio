@@ -1,0 +1,31 @@
+---
+import Layout from "../components/Layout.astro"
+import Card from "../components/Card.astro"
+---
+
+<Layout>
+
+    <div class="flex h-screen text-center">
+		<div class="m-auto flex flex-row justify-center content-center" id="wrapper1">
+            <Card path="#" cardName="G R A P H I C S" id="c1" bg="../img/y2b.jpg"></Card>
+            <Card path="#" cardName="I N T E R F A C E S" id="c2"></Card>
+            <Card path="#" cardName="F R O N T E N D" id="c3"></Card>
+        </div>
+    </div>
+
+</Layout>
+
+<style>
+
+@media screen and (orientation: portrait)
+{
+
+#wrapper1
+{
+    flex-direction: column;
+    margin-top:69px;
+}
+
+}
+
+</style>
