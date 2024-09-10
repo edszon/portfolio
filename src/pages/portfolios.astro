@@ -7,9 +7,9 @@ import Card from "../components/Card.astro"
 
     <div class="flex h-screen text-center">
 		<div class="m-auto flex flex-row justify-center content-center" id="wrapper1">
-            <Card path="#" cardName="G R A P H I C S" id="c1" bg="../img/y2b.jpg"></Card>
-            <Card path="#" cardName="I N T E R F A C E S" id="c2"></Card>
-            <Card path="#" cardName="F R O N T E N D" id="c3"></Card>
+            <Card path="graphics" cardName="G R A P H I C S" bg="../img/y2b.jpg"></Card>
+            <Card transDelay="0.1s" path="#" cardName="I N T E R F A C E S" bg="../img/vexed.png"></Card>
+            <Card transDelay="0.2s" path="#" cardName="F R O N T E N D" bg="../img/frontend.avif"></Card>
         </div>
     </div>
 
@@ -20,11 +20,11 @@ import Card from "../components/Card.astro"
 @media screen and (orientation: portrait)
 {
 
-#wrapper1
-{
-    flex-direction: column;
-    margin-top:69px;
-}
+    #wrapper1
+    {
+        flex-direction: column;
+        margin-top:69px;
+    }
 
 }
 

@@ -1,5 +1,7 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import NavIcon from "./NavIcon.astro"
+import { fade } from 'astro:transitions';
 ---
 
 <html lang="en">
@@ -9,16 +11,19 @@ import NavIcon from "./NavIcon.astro"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Edson Cavalcanti</title>
+        <ViewTransitions />
 	</head>
 
 	<body>
 
-        <header class="fixed flex text-center w-full p-3">
+        <header transition:persist class="fixed flex text-center w-full p-3">
             <NavIcon path="/" iconName="mdi:house"></NavIcon>
             <NavIcon path="#" iconName="solar:moon-bold"></NavIcon>
         </header>
 
-		<slot />
+        <main transition:animate={fade({duration: '0.4s'})}>
+		    <slot />
+        </main>
 
 	</body>
 </html>

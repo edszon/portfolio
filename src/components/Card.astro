@@ -1,64 +1,114 @@
 ---
 const {path = '#'} = Astro.props;
 const {cardName = '#'} = Astro.props;
+const {transDelay = '0s'} = Astro.props;
 let {bg = "#"} = Astro.props;
-bg = 'url("' + bg + '")';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <a href={path}>
 
-    <div id="card">
+    <div class="card">
         <h1>{cardName}</h1>
+        <img src={bg}>
     </div>
 
 </a>
 
-<style define:vars={{bg}}>
+<style define:vars={{bg, transDelay}}>
+
+.card
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(37, 35, 32);
+    background-size: auto 100%;
+    background-position: center;
+    animation: GoUp 0.75s ease;
+    animation-fill-mode: forwards;
+    animation-delay: var(--transDelay);
+    opacity: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:15px;
+    margin:10px;
+    transition: width 0.3s ease;
+    overflow:hidden;
+}
+
+.card img
+{
+    pointer-events: none;
+    position: absolute;
+    width: auto;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+}
+
+.card h1
+{
+    color:rgb(235, 226, 213);
+    background-color:black;
+}
 
 @media screen and (orientation: landscape)
 {
-    #card
+    .card
     {
-        font-family: Arial, Helvetica, sans-serif;
         width:25vw;
         height:40vw;
         display:flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size:15px;
-        margin:10px;
     }
+
+    .card:hover
+    {
+        width:40vw;
+    }
+
+    .card:hover img
+    {
+        opacity: 0.5;
+    }
+
+    .card h1
+    {
+        padding:8px 12px 8px 12px;
+        font-size:0.8vw;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover h1
+    {
+        transform: scale(1.25);
+    }
+
 }
 
 @media screen and (orientation: portrait)
 {
-    #card
+    .card
     {
-        font-family: Arial, Helvetica, sans-serif;
+
         width:60vw;
         height:60vw;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size:15px;
-        margin:10px;
+    }
+
+    .card h1
+    {
+        padding: 4px 6px 4px 6px;
     }
 }
 
-#card
-{
-    background-image: var(--bg);
-    background-size: auto 100%;
-    background-position: center;
-}
 
-#card h1
-{
-    color:rgb(235, 226, 213);
-    background-color:black;
-    padding:8px 12px 8px 12px;
-}
+
+@keyframes GoUp
+    {
+        0% {transform: translateY(30vh) scale(0.8); opacity: 0;}
+        100% {transform: translateY(0vh); opacity: 1;}
+    }
 
 </style>
