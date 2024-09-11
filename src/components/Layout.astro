@@ -4,6 +4,40 @@ import NavIcon from "./NavIcon.astro"
 import { fade } from 'astro:transitions';
 ---
 
+<script is:inline data-astro-rerun>
+    
+
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark') {
+    document.documentElement.classList.add('dark')
+    } else {
+    document.documentElement.classList.remove('dark')
+    }
+    
+    // Function to toggle between light and dark modes
+    function toggleColorMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                // Switch to light mode
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                // Switch to dark mode
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Attach the toggle function to the button with ID 'themeToggle'
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggleButton = document.getElementById('themeToggle');
+            if (themeToggleButton) {
+                themeToggleButton.addEventListener('click', toggleColorMode);
+            }
+        });
+
+</script>
+
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -17,8 +51,8 @@ import { fade } from 'astro:transitions';
 	<body>
 
         <header transition:persist class="fixed flex text-center w-full p-3">
-            <NavIcon path="/" iconName="mdi:house"></NavIcon>
-            <NavIcon path="#" iconName="solar:moon-bold"></NavIcon>
+            <NavIcon buttonID="home" path="/" iconName="mdi:house"></NavIcon>
+            <NavIcon buttonID="themeToggle" iconName="solar:moon-bold"></NavIcon>
         </header>
 
         <main transition:animate={fade({duration: '0.4s'})}>
@@ -28,13 +62,21 @@ import { fade } from 'astro:transitions';
 	</body>
 </html>
 
-<style>
+<style is:global>
 
     html
     {
         top: 0;
         margin: 0;
         box-sizing: border-box;
+        background-color: rgb(235, 226, 213);
+        transition: background-color 0.3s ease;
+    }
+
+    html.dark 
+    {
+        background-color: #16161b;
+        color: #fff;
     }
 
     header
@@ -51,13 +93,29 @@ import { fade } from 'astro:transitions';
         {
             bottom: 0;
         }
+    } 
+
+    .navButton
+    {
+        background-color: rgb(226, 212, 191);
+        padding:5px;
+        border-radius: 35px;
+        margin:5px;
+        transition: background-color 0.3s ease;
+    }
+    .dark .navButton
+    {
+        background-color: black;
     }
 
-   
-
-    html
+    .navButton:hover
     {
-        background-color: rgb(235, 226, 213);
+        background-color: rgb(199, 186, 169);
+    }   
+
+    .dark .navButton:hover
+    {
+        background-color: rgb(17, 17, 19);
     }
 
 </style>

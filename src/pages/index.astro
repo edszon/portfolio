@@ -21,7 +21,7 @@ import Layout from "../components/Layout.astro"
 
 </Layout>
 
-<style>
+<style is:global>
 
     #logo {
         font-family: Arial, Helvetica, sans-serif;
@@ -37,6 +37,10 @@ import Layout from "../components/Layout.astro"
 
     #logowrapper:hover #specializations {
         background-color: rgb(224, 214, 201);
+    }
+
+	.dark #logowrapper:hover #specializations {
+        background-color: rgb(19, 19, 27);
     }
 
     #logo h1 {
@@ -76,6 +80,17 @@ import Layout from "../components/Layout.astro"
     #logo #anchorWrapper a:hover {
         background-color: rgb(214, 204, 190);
     }
+
+
+	.dark #logo #anchorWrapper a
+	{
+		background-color: rgb(16, 16, 22);
+	}
+
+	.dark #logo #anchorWrapper a:hover
+	{
+		background-color: rgb(25, 25, 36);
+	}
 
     @font-face {
         font-family: 'Lovan';
