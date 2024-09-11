@@ -17,6 +17,12 @@ import { ViewTransitions } from 'astro:transitions';
 
 <style define:vars={{bg, transDelay}}>
 
+a
+{
+    display:block;
+    overflow: hidden;
+}
+
 .card
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -26,15 +32,16 @@ import { ViewTransitions } from 'astro:transitions';
     animation: GoUp 0.75s ease;
     animation-fill-mode: forwards;
     animation-delay: var(--transDelay);
-    opacity: 0;
+    opacity: 1;
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size:15px;
-    margin:10px;
+    margin:0px 10px 0px 10px;
     transition: width 0.3s ease;
     overflow:hidden;
+    position: relative;
 }
 
 .card img
@@ -43,15 +50,15 @@ import { ViewTransitions } from 'astro:transitions';
     position: absolute;
     width: auto;
     height: 100%;
-    z-index: -1;
     object-fit: cover;
-    opacity: 0.1;
-    transition: opacity 0.3s ease;
+    opacity: 0.15;
+    transition: opacity 1s ease;
 }
 
 .card h1
 {
     color:rgb(235, 226, 213);
+    z-index: 1;
     background-color:black;
 }
 
@@ -62,6 +69,7 @@ import { ViewTransitions } from 'astro:transitions';
         width:25vw;
         height:40vw;
         display:flex;
+        opacity: 0;
     }
 
     .card:hover
@@ -107,8 +115,8 @@ import { ViewTransitions } from 'astro:transitions';
 
 @keyframes GoUp
     {
-        0% {transform: translateY(30vh) scale(0.8); opacity: 0;}
-        100% {transform: translateY(0vh); opacity: 1;}
+       0%{opacity: 0; transform: translateY(1000px);}
+       100%{opacity: 1;}
     }
 
 </style>

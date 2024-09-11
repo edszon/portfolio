@@ -2,9 +2,10 @@
 import { Icon } from 'astro-icon/components'
 const { path = "#" } = Astro.props;
 const { iconName = "#" } = Astro.props;
+const {size = "25px"} = Astro.props;
 ---
 <a href = {path}>
-    <Icon class="navicon" size="25px" name = {iconName} />
+    <Icon class="navicon" size={size} name = {iconName} />
 </a>
 
 <style>
