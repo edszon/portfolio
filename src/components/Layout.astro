@@ -4,64 +4,6 @@ import NavIcon from "./NavIcon.astro"
 import { fade } from 'astro:transitions';
 ---
 
-<style is:global>
-
-    html
-    {
-        top: 0;
-        margin: 0;
-        box-sizing: border-box;
-        background-color: rgb(235, 226, 213);
-        transition: background-color 0.3s ease;
-    }
-
-    html.dark 
-    {
-        background-color: #16161b;
-        color: #fff;
-    }
-
-    header
-    {
-        justify-content: right;
-        align-items: center;
-        z-index: 999;
-        height: fit-content;
-    }
-
-    @media screen and (orientation: portrait)
-    {
-        header
-        {
-            bottom: 0;
-        }
-    } 
-
-    .navButton
-    {
-        background-color: rgb(226, 212, 191);
-        padding:5px;
-        border-radius: 35px;
-        margin:5px;
-    }
-    .dark .navButton
-    {
-        background-color: black;
-    }
-
-    .navButton:hover
-    {
-        transition: background-color 0.3s ease;
-        background-color: rgb(199, 186, 169);
-    }   
-
-    .dark .navButton:hover
-    {
-        background-color: rgb(17, 17, 19);
-    }
-
-</style>
-
 <script is:inline data-astro-rerun>
     
 
@@ -119,3 +61,61 @@ import { fade } from 'astro:transitions';
 
 	</body>
 </html>
+
+<style is:global>
+
+    html
+    {
+        top: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: rgb(235, 226, 213);
+        transition: background-color 0.3s ease;
+    }
+
+    html.dark 
+    {
+        background-color: #16161b;
+        color: #fff;
+    }
+
+    header
+    {
+        justify-content: right;
+        align-items: center;
+        z-index: 999;
+        height: fit-content;
+    }
+
+    @media screen and (orientation: portrait)
+    {
+        header
+        {
+            bottom: 0;
+        }
+    } 
+
+    .navButton
+    {
+        background-color: rgb(226, 212, 191);
+        padding:5px;
+        border-radius: 35px;
+        margin:5px;
+    }
+    .dark .navButton
+    {
+        background-color: black;
+    }
+
+    .navButton:hover
+    {
+        transition: background-color 0.3s ease;
+        background-color: rgb(199, 186, 169);
+    }   
+
+    .dark .navButton:hover
+    {
+        background-color: rgb(17, 17, 19);
+    }
+
+</style>
