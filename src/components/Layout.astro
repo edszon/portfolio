@@ -4,64 +4,6 @@ import NavIcon from "./NavIcon.astro"
 import { fade } from 'astro:transitions';
 ---
 
-<script is:inline data-astro-rerun>
-    
-
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (localStorage.theme === 'dark') {
-    document.documentElement.classList.add('dark')
-    } else {
-    document.documentElement.classList.remove('dark')
-    }
-    
-    // Function to toggle between light and dark modes
-    function toggleColorMode() {
-            if (document.documentElement.classList.contains('dark')) {
-                // Switch to light mode
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                // Switch to dark mode
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-
-        // Attach the toggle function to the button with ID 'themeToggle'
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggleButton = document.getElementById('themeToggle');
-            if (themeToggleButton) {
-                themeToggleButton.addEventListener('click', toggleColorMode);
-            }
-        });
-
-</script>
-
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Edson Cavalcanti</title>
-        <ViewTransitions />
-	</head>
-
-	<body>
-
-        <header transition:persist class="fixed flex text-center w-full p-3">
-            <NavIcon buttonID="home" path="/" iconName="mdi:house"></NavIcon>
-            <NavIcon buttonID="themeToggle" iconName="solar:moon-bold"></NavIcon>
-        </header>
-
-        <main transition:animate={fade({duration: '0.4s'})}>
-		    <slot />
-        </main>
-
-	</body>
-</html>
-
 <style is:global>
 
     html
@@ -119,3 +61,61 @@ import { fade } from 'astro:transitions';
     }
 
 </style>
+
+<script is:inline data-astro-rerun>
+    
+
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark') {
+    document.documentElement.classList.add('dark')
+    } else {
+    document.documentElement.classList.remove('dark')
+    }
+    
+    // Function to toggle between light and dark modes
+    function toggleColorMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                // Switch to light mode
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                // Switch to dark mode
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Attach the toggle function to the button with ID 'themeToggle'
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggleButton = document.getElementById('themeToggle');
+            if (themeToggleButton) {
+                themeToggleButton.addEventListener('click', toggleColorMode);
+            }
+        });
+
+</script>
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Edson Cavalcanti</title>
+        <ViewTransitions />
+	</head>
+
+	<body>
+
+        <header transition:persist class="fixed flex text-center w-full p-3">
+            <NavIcon buttonID="home" path="/" iconName="mdi:house"></NavIcon>
+            <NavIcon buttonID="themeToggle" iconName="solar:moon-bold"></NavIcon>
+        </header>
+
+        <main transition:animate={fade({duration: '0.4s'})}>
+		    <slot />
+        </main>
+
+	</body>
+</html>

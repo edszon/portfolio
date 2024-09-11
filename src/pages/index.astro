@@ -2,25 +2,6 @@
 import Layout from "../components/Layout.astro"
 ---
 
-<Layout>
-
-	<link rel="preload" as="font" type="font/ttf" href="fonts/lovan.ttf" crossorigin>
-
-    <div class="flex h-screen text-center" id="logo">
-        <div class="m-auto">
-            <div id="logowrapper">
-                <h1 class="select-none text-9xl opacity-0">edszon</h1>
-                <p class="select-none -mt-6">&copy; 2024 Edson Cavalcanti</p>
-                <p class="m-1 select-none" id="specializations">GRAPHICS • UX • UI • FRONTEND</p>
-                <div id="anchorWrapper">
-                    <a href="portfolios" class="mt-2 select-none">P O R T F Ó L I O S</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</Layout>
-
 <style is:global>
 
     #logo {
@@ -128,3 +109,22 @@ import Layout from "../components/Layout.astro"
 	}
 
 </style>
+
+<Layout>
+
+	<link rel="preload" as="font" type="font/ttf" href="../fonts/lovan.ttf" crossorigin>
+
+    <div class="flex h-screen text-center" id="logo">
+        <div class="m-auto">
+            <div id="logowrapper">
+                <h1 class="select-none text-9xl opacity-0">edszon</h1>
+                <p class="select-none -mt-6">&copy; 2024 Edson Cavalcanti</p>
+                <p class="m-1 select-none" id="specializations">GRAPHICS • UX • UI • FRONTEND</p>
+                <div id="anchorWrapper">
+                    <a href="portfolios" class="mt-2 select-none">P O R T F Ó L I O S</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</Layout>
