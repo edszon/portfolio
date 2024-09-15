@@ -1,0 +1,72 @@
+---
+import Layout from '../../components/Layout.astro'
+import { getCollection } from 'astro:content';
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const graphicsCollection = await getCollection('graphics');
+  return graphicsCollection.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout>
+  <div id="wrapper">
+    <img src={entry.data.path}>
+    <div id="descWrapper">
+      <h1>{entry.data.title}</h1>
+      <h2>{entry.data.type}</h2>
+      <p>{entry.data.desc}</p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+
+main
+{
+  margin-top: 0px;
+}
+
+#wrapper
+{
+  padding: 1em; 
+}
+
+#wrapper #descWrapper
+{
+  padding: 1em;
+}
+
+#wrapper h1
+{
+  font-weight: bold;
+  font-size:2em;
+}
+
+#descWrapper h2
+{
+  margin-top:-0.5em;
+  margin-bottom: 0.25em;
+  font-size: 1.5em;
+}
+
+#descWrapper p
+{
+  text-align: justify;
+}
+
+
+img
+{
+  width:30em;
+  height: auto;
+  max-width: 100%;
+  max-height: 30em;
+  margin-bottom: 1vh;
+}
+
+</style>

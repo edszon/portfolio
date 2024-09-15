@@ -28,11 +28,15 @@ import { fade } from 'astro:transitions';
         }
 
         // Attach the toggle function to the button with ID 'themeToggle'
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() 
+        {
             const themeToggleButton = document.getElementById('themeToggle');
             if (themeToggleButton) {
                 themeToggleButton.addEventListener('click', toggleColorMode);
             }
+
+            //const removeHeaderHeight = 'margin-top: -' + document.getElementById('header').offsetHeight + 'px;';
+            //document.getElementById('mainWrapper').setAttribute('style',removeHeaderHeight);
         });
 
 </script>
@@ -50,12 +54,12 @@ import { fade } from 'astro:transitions';
 
 	<body>
 
-        <header transition:persist class="fixed flex text-center w-full p-3">
+        <header id="header" transition:persist class="fixed flex text-center w-full p-3">
             <NavIcon buttonID="home" path="/" iconName="mdi:house"></NavIcon>
             <NavIcon buttonID="themeToggle" iconName="solar:moon-bold"></NavIcon>
         </header>
 
-        <main transition:animate={fade({duration: '0.4s'})}>
+        <main id="mainWrapper" transition:animate={fade({duration: '0.4s'})}>
 		    <slot />
         </main>
 
@@ -71,6 +75,7 @@ import { fade } from 'astro:transitions';
         box-sizing: border-box;
         background-color: rgb(235, 226, 213);
         transition: background-color 0.3s ease;
+        height:100svh;
     }
 
     html.dark 
