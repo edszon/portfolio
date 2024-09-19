@@ -9,11 +9,10 @@ export interface Props
 }
 
 const {path = 'javascript:void(0)', desc, type, title, anchor} = Astro.props;
-const fullAnchor = '../graphics/' + anchor;
 
 ---
 
-    <a href={fullAnchor} class="image-anchor">
+    <a href={anchor} class="image-anchor">
         <div class = "image-box">
             <img src={path}>
         </div>
