@@ -2,8 +2,10 @@
 import { string } from "astro:schema";
 import Layout from "../components/Layout.astro";
 import ViewTransitions from "astro/components/ViewTransitions.astro";
-import graphicProjects from "../data/graphics.json";
+import { getCollection } from 'astro:content';
+const graphicEntries = await getCollection('graphics');
 import GraphicThumb from "../components/graphics/graphicThumb.astro";
+let delayTransPage = 0;
 ---
 
 <Layout>
@@ -14,13 +16,15 @@ import GraphicThumb from "../components/graphics/graphicThumb.astro";
             <div id="img-track">
 
                 {
-                    graphicProjects.map((graphicProjects) => {
+                    graphicEntries.map((graphicEntry) => {
+                        delayTransPage = delayTransPage + 0.1;
                         return  (
                                 <GraphicThumb 
-                                    title = {graphicProjects.title} 
-                                    path = {graphicProjects.path} 
-                                    desc = {graphicProjects.path} 
-                                    type = {graphicProjects.type}
+                                    title = {graphicEntry.data.title} 
+                                    path = {graphicEntry.data.path} 
+                                    desc = {graphicEntry.data.path} 
+                                    type = {graphicEntry.data.type}
+                                    anchor = {graphicEntry.slug}
                                 />
                                 );
                     })

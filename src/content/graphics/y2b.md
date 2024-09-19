@@ -1,6 +1,6 @@
 ---
 title: "Yeezus II: Side B"
 path: ../../../img/graphics/y2a.jpg
-desc: Yeezus II was initially conceived as a way to release a significant portion of the material that was left out of the production of Yeezus, a process heavily influenced by producer Rick Rubin's streamlined approach. During the development period of Yeezus II, Ye began a significant collaboration with the legendary Paul McCartney, former "The Beatles". He would also conduct studio sessions in Mexico. 
-type: Album Cover
+desc: Yeezus II foi inicialmente concebido como uma forma de lançar uma parte significativa do material que ficou de fora da produção de Yeezus, um processo fortemente influenciado pela abordagem simplificada do produtor Rick Rubin. Durante o período de desenvolvimento de Yeezus II, Ye começou uma colaboração significativa com o lendário Paul McCartney, ex-membro dos Beatles. Ele também realizou sessões de estúdio no México. 
+type: Arte promocional
 ---
