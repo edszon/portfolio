@@ -7,6 +7,6 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig(
 {
-  site: 'https://edszon.github.io',
+  site: 'https://edszon.com',
   integrations: [tailwind(), icon()],
 });
