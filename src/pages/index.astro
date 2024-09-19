@@ -4,6 +4,8 @@ import Layout from "../components/Layout.astro"
 
 <Layout>
 
+	<link rel="preload" as="font" type="font/ttf" href="fonts/lovan.ttf" crossorigin>
+
     <div class="flex h-screen text-center" id="logo">
         <div class="m-auto">
             <div id="logowrapper">
@@ -92,7 +94,7 @@ import Layout from "../components/Layout.astro"
 
     @font-face {
         font-family: 'Lovan';
-        src: url('../fonts/lovan.ttf') format('truetype');
+        src: url('/fonts/lovan.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
