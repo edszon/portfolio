@@ -1,6 +1,6 @@
 ---
-title: "Yandhi"
-path: ../../../img/graphics/jil.png
-desc: Yeezus II foi inicialmente concebido como uma forma de lançar uma parte significativa do material que ficou de fora da produção de Yeezus, um processo fortemente influenciado pela abordagem simplificada do produtor Rick Rubin. Durante o período de desenvolvimento de Yeezus II, Ye começou uma colaboração significativa com o lendário Paul McCartney, ex-membro dos Beatles. Ele também realizou sessões de estúdio no México. 
+title: "Jesus Is Lord"
+path: /src/img/graphics/jil.png
+desc: Jesus Is Lord é um álbum de estúdio não lançado de Kanye West, desenvolvido após a publicação de Jesus Is King. Em 18 de julho de 2020, Ye anunciou oficialmente o projeto como Donda, dedicando-o à sua mãe, Donda West. O álbum continuou a trabalhar em material previamente desenvolvido para Yandhi e introduziu novas faixas que exploravam temas mais sombrios e políticos. Vazamentos de informações revelaram nomes alternativos para o álbum, como Palm Springs e Our Beautiful Amazing Reality.
 type: Arte promocional
 ---

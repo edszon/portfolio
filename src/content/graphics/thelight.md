@@ -1,6 +1,6 @@
 ---
-title: "Yeezus II: Side B"
-path: ../../../img/graphics/light.png
-desc: Yeezus II foi inicialmente concebido como uma forma de lançar uma parte significativa do material que ficou de fora da produção de Yeezus, um processo fortemente influenciado pela abordagem simplificada do produtor Rick Rubin. Durante o período de desenvolvimento de Yeezus II, Ye começou uma colaboração significativa com o lendário Paul McCartney, ex-membro dos Beatles. Ele também realizou sessões de estúdio no México. 
+title: "The Light"
+path: /src/img/graphics/light.png
+desc: Na faixa intensa e cheia de guitarras “THE LIGHT,” Kevin e Joba compartilham versos pessoais sobre seus passados, com Joba abordando o suicídio de seu pai e sua saúde mental, enquanto Kevin fala sobre relações familiares difíceis e suas memórias da infância no Texas. O tema da luz é recorrente em ROADRUNNER NEW LIGHT, NEW MACHINE, com a banda usando a frase “A luz vale a espera” na promoção do álbum. Em uma entrevista de março de 2021, Joba explicou que a canção representa “entrar na luz, ou na esperança, e segurar firme.” A faixa também inclui um sample de “Hace casi 2000 anos” da banda argentina Color Humano.
 type: Arte promocional
 ---

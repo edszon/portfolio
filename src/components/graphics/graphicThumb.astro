@@ -27,9 +27,18 @@ const {path = 'javascript:void(0)', desc, type, title, anchor} = Astro.props;
 
     .image-box
     {
-        width:10vw;
-        height: 10vw;
+        width:14vw;
+        height: 14vw;
         background-color: transparent;
+    }
+
+    @media screen and (orientation:portrait) 
+    { 
+        .image-box
+        {
+        width:40vw;
+        height:40vw;
+        }
     }
 
     .image-box img

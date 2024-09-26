@@ -1,6 +1,6 @@
 ---
 title: "Yandhi"
-path: ../../../img/graphics/yandhi.png
-desc: Yeezus II foi inicialmente concebido como uma forma de lançar uma parte significativa do material que ficou de fora da produção de Yeezus, um processo fortemente influenciado pela abordagem simplificada do produtor Rick Rubin. Durante o período de desenvolvimento de Yeezus II, Ye começou uma colaboração significativa com o lendário Paul McCartney, ex-membro dos Beatles. Ele também realizou sessões de estúdio no México. 
+path: /src/img/graphics/yandhi.png
+desc: Yandhi é um álbum não lançado de Kanye West, criado em setembro de 2018 e programado para ser lançado em 29 de setembro do mesmo ano. O projeto gerou grande expectativa entre os fãs, mas foi abandonado em favor de JESUS IS KING. Apesar de nunca ter sido lançado oficialmente, várias faixas das sessões vazaram online, permitindo que os fãs ouvissem e remixassem centenas de versões. Essa situação fez de Yandhi um dos projetos não lançados mais infames de Kanye, com um legado que continua a atrair a atenção do público.
 type: Arte promocional
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Yandhi"
-path: ../../../img/graphics/tlop.png
-desc: Yeezus II foi inicialmente concebido como uma forma de lançar uma parte significativa do material que ficou de fora da produção de Yeezus, um processo fortemente influenciado pela abordagem simplificada do produtor Rick Rubin. Durante o período de desenvolvimento de Yeezus II, Ye começou uma colaboração significativa com o lendário Paul McCartney, ex-membro dos Beatles. Ele também realizou sessões de estúdio no México. 
+title: "The Life Of Pablo"
+path: /src/img/graphics/tlop.png
+desc: The Life of Pablo é o sétimo álbum de estúdio do rapper americano Kanye West, lançado em 14 de fevereiro de 2016 pela GOOD Music e distribuído pela Def Jam Recordings. As sessões de gravação ocorreram entre 2013 e 2016, em diversos locais, incluindo Itália, México, Canadá e Estados Unidos. West contou com uma variedade de produtores, incluindo os co-executivos Rick Rubin e Noah Goldstein. O álbum apresenta vocais convidados de artistas como The-Dream, Kelly Price, Chance the Rapper, Kirk Franklin, Kid Cudi, Desiigner, Rihanna, Young Thug, Chris Brown, The Weeknd, Ty Dolla Sign, Vic Mensa, Sia, Frank Ocean, Kendrick Lamar, Post Malone e Sampha.
 type: Arte promocional
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Yeezus II: Side B"
-path: ../../../img/graphics/donda.png
-desc: Yeezus II foi inicialmente concebido como uma forma de lançar uma parte significativa do material que ficou de fora da produção de Yeezus, um processo fortemente influenciado pela abordagem simplificada do produtor Rick Rubin. Durante o período de desenvolvimento de Yeezus II, Ye começou uma colaboração significativa com o lendário Paul McCartney, ex-membro dos Beatles. Ele também realizou sessões de estúdio no México. 
+title: "Donda"
+path: /src/img/graphics/donda.png
+desc: Donda é o décimo álbum de estúdio do rapper americano Kanye West, lançado pela GOOD Music e Def Jam Recordings em 29 de agosto de 2021. O álbum conta com uma ampla gama de colaborações, incluindo artistas como The Weeknd, Jay-Z, Marilyn Manson, Kid Cudi, Travis Scott e muitos outros. A produção ficou a cargo de West e outros produtores, como Mike Dean e BoogzDaBeast. Grande parte do material foi gravada em locais como o Bighorn Mountain Ranch, em Wyoming, e o Mercedes-Benz Stadium, em Atlanta. A versão deluxe inclui participações de André 3000, Tyler, The Creator e KayCyy.
 type: Arte promocional
 ---

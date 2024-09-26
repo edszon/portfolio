@@ -1,6 +1,6 @@
 ---
-title: "Yandhi"
-path: ../../../img/graphics/puppy.png
-desc: Yeezus II foi inicialmente concebido como uma forma de lançar uma parte significativa do material que ficou de fora da produção de Yeezus, um processo fortemente influenciado pela abordagem simplificada do produtor Rick Rubin. Durante o período de desenvolvimento de Yeezus II, Ye começou uma colaboração significativa com o lendário Paul McCartney, ex-membro dos Beatles. Ele também realizou sessões de estúdio no México. 
+title: "Puppy"
+path: /src/img/graphics/puppy.png
+desc: PUPPY é um álbum de estúdio não lançado da boy band americana BROCKHAMPTON, previsto para sair em 4 de junho de 2018. O coletivo, conhecido por sua mistura de hip hop, R&B e pop, gerou grande expectativa entre os fãs após o sucesso de *SATURATION*. Embora o álbum tenha sido cancelado, o grupo continuou a lançar novos projetos, mantendo sua abordagem inovadora e relevante na cena musical.
 type: Arte promocional
 ---

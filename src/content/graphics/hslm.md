@@ -1,6 +1,6 @@
 ---
-title: "Yandhi"
-path: ../../../img/graphics/hslm.png
-desc: Yeezus II foi inicialmente concebido como uma forma de lançar uma parte significativa do material que ficou de fora da produção de Yeezus, um processo fortemente influenciado pela abordagem simplificada do produtor Rick Rubin. Durante o período de desenvolvimento de Yeezus II, Ye começou uma colaboração significativa com o lendário Paul McCartney, ex-membro dos Beatles. Ele também realizou sessões de estúdio no México. 
+title: "HOOD STILL LOVE ME"
+path: /src/img/graphics/hslm.png
+desc: Hood Still Love Me é uma faixa descartada do álbum GINGER da boy band BROCKHAMPTON. Embora não tenha sido incluída na versão final do projeto, a música exemplifica o estilo único do grupo, misturando elementos de hip hop, R&B e letras introspectivas. A faixa poderia ter adicionado uma nova dimensão ao álbum, refletindo as experiências e emoções dos membros da banda. Como parte do processo criativo do BROCKHAMPTON, "Hood Still Love Me" é um testemunho da experimentação contínua e da evolução artística do coletivo.
 type: Arte promocional
 ---
