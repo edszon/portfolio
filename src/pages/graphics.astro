@@ -5,6 +5,7 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
 import { getCollection } from 'astro:content';
 const graphicEntries = await getCollection('graphics');
 import GraphicThumb from "../components/graphics/graphicThumb.astro";
+import { Image } from 'astro:assets';
 let delayTransPage = 0;
 ---
 
