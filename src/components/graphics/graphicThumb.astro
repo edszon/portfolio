@@ -6,9 +6,10 @@ export interface Props
     type: string;
     title: string;
     anchor: string;
+    delayTrans: string;
 }
 
-const {path = 'javascript:void(0)', desc, type, title, anchor} = Astro.props;
+const {path = 'javascript:void(0)', desc, type, title, anchor, delayTrans} = Astro.props;
 
 ---
 
@@ -18,7 +19,7 @@ const {path = 'javascript:void(0)', desc, type, title, anchor} = Astro.props;
         </div>
     </a>
 
-<style>
+<style define:vars={{delayTrans}}>
 
     .image-anchor
     {
@@ -27,6 +28,8 @@ const {path = 'javascript:void(0)', desc, type, title, anchor} = Astro.props;
 
     .image-box
     {
+        animation: WTF 1s ease var(--delayTrans) forwards;
+        opacity: 0;
         width:14vw;
         height: 14vw;
         background-color: transparent;
@@ -40,15 +43,29 @@ const {path = 'javascript:void(0)', desc, type, title, anchor} = Astro.props;
         height:40vw;
         }
     }
+    
+    @keyframes WTF
+    {
+        0% {transform: translateY(40vw); opacity: 0;}
+        100% {transform: translateY(0vw); opacity: 1;}
+    }
+
+    @keyframes FadeIn
+    {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
 
     .image-box img
     {
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition: opacity 0.5s ease, transform 0.2s ease, box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
     }
 
     .image-anchor:hover .image-box img
     {
-        opacity: 0.6;
+        transform: scale(1.05) rotate(5deg);
+        box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.4);
     }
     
 </style>
