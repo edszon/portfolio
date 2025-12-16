@@ -12,7 +12,19 @@ const graphicsCollection = defineCollection({
   }),
 });
 
+const interfacesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    path: z.string(),
+    desc: z.string(),
+    tech: z.string(),
+    title: z.string(),
+    link: z.string().optional(),
+  }),
+});
+
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
   'graphics': graphicsCollection,
+  'interfaces': interfacesCollection,
 };

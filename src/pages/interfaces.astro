@@ -1,31 +1,28 @@
 ---
-import { string } from "astro:schema";
 import Layout from "../components/Layout.astro";
-import ViewTransitions from "astro/components/ViewTransitions.astro";
 import { getCollection } from 'astro:content';
-const graphicEntries = await getCollection('graphics');
-import GraphicThumb from "../components/graphics/graphicThumb.astro";
-import { Image } from 'astro:assets';
+const interfaceEntries = await getCollection('interfaces');
+import InterfaceThumb from "../components/interfaces/interfaceThumb.astro";
 let delayTransPage = 0;
 ---
 
 <Layout>
     <div class="flex h-screen text-center" >
         <div class="m-auto">
-            <h1>G A L E R I A</h1>
+            <h1>I N T E R F A C E S</h1>
 
-            <div id="img-track">
+            <div id="interface-track">
 
                 {
-                    graphicEntries.map((graphicEntry) => {
-                        delayTransPage = delayTransPage + 0.05;
+                    interfaceEntries.map((interfaceEntry) => {
+                        delayTransPage = delayTransPage + 0.1;
                         return  (
-                                <GraphicThumb 
-                                    title = {graphicEntry.data.title} 
-                                    path = {graphicEntry.data.path} 
-                                    desc = {graphicEntry.data.path} 
-                                    type = {graphicEntry.data.type}
-                                    anchor = {`/graphics/${graphicEntry.slug}`}
+                                <InterfaceThumb 
+                                    title = {interfaceEntry.data.title} 
+                                    path = {interfaceEntry.data.path} 
+                                    desc = {interfaceEntry.data.desc} 
+                                    tech = {interfaceEntry.data.tech}
+                                    anchor = {`/interfaces/${interfaceEntry.slug}`}
                                     delayTrans = {delayTransPage + "s"}
                                 />
                                 );
@@ -46,13 +43,13 @@ let delayTransPage = 0;
         margin-top: 1rem;
     }
 
-    #img-track
+    #interface-track
     {
         display: inline-flex;
         flex-wrap: wrap;
         padding: 1rem;
         align-items: center;
-        gap: 5px;
+        gap: 15px;
         justify-content: center;
         max-width: 70%;
     }
@@ -65,7 +62,7 @@ let delayTransPage = 0;
             font-size:8vw;
         }
 
-        #img-track
+        #interface-track
         {
             max-width: 90%;
         }

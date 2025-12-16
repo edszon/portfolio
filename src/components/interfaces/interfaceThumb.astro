@@ -1,0 +1,98 @@
+---
+export interface Props
+{
+    path: string;
+    desc: string;
+    tech: string;
+    title: string;
+    anchor: string;
+    delayTrans: string;
+}
+
+const {path = 'javascript:void(0)', desc, tech, title, anchor, delayTrans} = Astro.props;
+
+---
+
+    <a href={anchor} class="interface-anchor">
+        <div class = "interface-box">
+            <img src={path}>
+            <div class="interface-overlay">
+                <span class="interface-title">{title}</span>
+            </div>
+        </div>
+    </a>
+
+<style define:vars={{delayTrans}}>
+
+    .interface-anchor
+    {
+        text-decoration: none;
+    }
+
+    .interface-box
+    {
+        animation: SlideUp 1s ease var(--delayTrans) forwards;
+        opacity: 0;
+        width: 20vw;
+        height: 12vw;
+        background-color: #1a1a1a;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    @media screen and (orientation:portrait) 
+    { 
+        .interface-box
+        {
+            width: 80vw;
+            height: 45vw;
+        }
+    }
+    
+    @keyframes SlideUp
+    {
+        0% {transform: translateY(40vw); opacity: 0;}
+        100% {transform: translateY(0vw); opacity: 1;}
+    }
+
+    .interface-box img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+
+    .interface-overlay
+    {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .interface-title
+    {
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .interface-anchor:hover .interface-box img
+    {
+        opacity: 0.4;
+    }
+
+    .interface-anchor:hover .interface-overlay
+    {
+        opacity: 1;
+    }
+    
+</style>
