@@ -33,20 +33,27 @@ const {path = 'javascript:void(0)', desc, tech, title, anchor, delayTrans} = Ast
     {
         animation: SlideUp 1s ease var(--delayTrans) forwards;
         opacity: 0;
-        width: 20vw;
-        height: 12vw;
+        width: 15vw;
+        height: 15vw;
         background-color: #1a1a1a;
         position: relative;
         overflow: hidden;
         border-radius: 8px;
+        border: 2px solid rgb(175, 166, 153);
+        transition: border-color 0.3s ease;
+    }
+
+    :global(.dark) .interface-box 
+    {
+        border-color: #2e2e36;
     }
 
     @media screen and (orientation:portrait) 
     { 
         .interface-box
         {
-            width: 80vw;
-            height: 45vw;
+            width: 70vw;
+            height: 70vw;
         }
     }
     
